@@ -65,7 +65,7 @@ canvas {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	font-size: max(2vh, 18px);
-	color: #000;
+	color: #888888;
 
 }
 
