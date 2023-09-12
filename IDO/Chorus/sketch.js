@@ -13,7 +13,7 @@ async function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Clear with black on setup
-  background(0);
+background('rgba(70,109,114, 1)');
 
   // Make the volume quieter
   Tone.Master.volume.value = volume;
@@ -48,7 +48,7 @@ function draw() {
   const dim = Math.min(width, height);
 
   // Black background
-  background(0);
+background('rgba(70,109,114, 1)');
 
   strokeWeight(dim * 0.0175);
   stroke(255);

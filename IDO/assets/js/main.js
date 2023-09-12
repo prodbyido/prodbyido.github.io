@@ -12,7 +12,8 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
-		$main_articles = $main.children('article');
+		$main_articles = $main.children('article'),
+		$iframe = $main_articles.children('iframe');
 
 	// Breakpoints.
 		breakpoints({
@@ -285,7 +286,10 @@
 
 
 			};
-
+function stopSound() {
+  player.stop();
+  player.seek(0);
+}
 		// Articles.
 			$main_articles.each(function() {
 
@@ -296,6 +300,7 @@
 						.appendTo($this)
 						.on('click', function() {
 							location.hash = '';
+							mousePressed();
 						});
 
 				// Prevent clicks from inside article from bubbling.
@@ -309,8 +314,9 @@
 			$body.on('click', function(event) {
 
 				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
+					if ($body.hasClass('is-article-visible')){
 						$main._hide(true);
+					}
 
 			});
 

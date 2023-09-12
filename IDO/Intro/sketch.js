@@ -1,21 +1,18 @@
-console.log(foo);
-
 // See the 'assets' folder for our MP3 file URL
 const MP3 = "../IDO.wav";
-// const MP3 = 'https://cdn.glitch.com/239c0770-a81a-480b-9e0b-e5510a0738d7%2FPilotpriest%20-%20Matter.mp3?v=1571090488415'
 // Master volume in decibels
 const volume = 0;
 
-let player, analyser;
+var player, analyser;
 
-let playing = false;
+var playing = false;
 
 // Create a new canvas to the browser size
 async function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Clear with black on setup
-  background(0);
+background('rgba(70,109,114, 0.4)');
 
   // Make the volume quieter
   Tone.Master.volume.value = volume;
@@ -50,7 +47,7 @@ function draw() {
   const dim = Math.min(width, height);
 
   // Black background
-  background(0);
+background('rgba(70,109,114, 0.4)');
 
   strokeWeight(dim * 0.0175);
   stroke(255);

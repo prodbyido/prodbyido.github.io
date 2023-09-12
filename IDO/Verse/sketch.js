@@ -13,7 +13,7 @@ async function setup () {
   createCanvas(windowWidth, windowHeight);
   
   // Clear with black on setup
-  background(0);
+background('rgba(70,109,114, 0.3)');
 
   // Make the volume quieter
   Tone.Master.volume.value = volume;
@@ -48,7 +48,7 @@ function draw() {
   const dim = Math.min(width, height);
 
   // Black background
-  background(0, 0, 0, 10);
+background('rgba(70,109,114, 0.3)');
   
   strokeWeight(dim * 0.0025);
   stroke(255);
@@ -88,7 +88,7 @@ function mousePressed () {
   
   // Small detail here: clear the screen to black and then
   // force a re-draw so there is no blur
-  background(0);
+background('rgba(70,109,114, 0.3)');
   redraw();
 }
 

@@ -15,7 +15,7 @@ async function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Clear with black on setup
-  background(0);
+background('rgba(70,109,114, 0.9)');
 
   // Make the volume quieter
   Tone.Master.volume.value = volume;
@@ -52,7 +52,7 @@ function draw() {
   const dim = Math.min(width, height);
 
   // Black background
-  background(0);
+background('rgba(70,109,114, 0.9)');
 
   strokeWeight(dim * 0.0175);
   stroke(255);
@@ -70,7 +70,7 @@ function draw() {
   const energies = analyser.getEnergyBins();
 
   for (let i = 0; i < energies.length; i++) {
-    const energy = energies[i];
+    const energy = 0.6*energies[i];
     const x = map(i, 0, energies.length - 1, 0, width);
     const offset = map(energy, -100, -30, 0, 1);
     const y = height - offset * height;
